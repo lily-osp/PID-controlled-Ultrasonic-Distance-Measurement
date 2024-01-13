@@ -2,21 +2,19 @@
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Setup](#setup)
-3. [Dependencies](#dependencies)
-4. [Configuration](#configuration)
-5. [Operation](#operation)
-6. [PID Parameters](#pid-parameters)
-7. [Sensor Calibration](#sensor-calibration)
-8. [Motor Control](#motor-control)
-9. [Serial Output](#serial-output)
-10. [Troubleshooting](#troubleshooting)
+1. [Introduction](#1-introduction)
+2. [Setup](#2-setup)
+3. [Dependencies](#3-dependencies)
+4. [Configuration](#4-configuration)
+5. [Operation](#5-operation)
+6. [PID Parameters](#6-pid-parameters)
+7. [Sensor Calibration](#7-sensor-calibration)
+8. [Motor Control](#8-motor-control)
+9. [Serial Output](#9-serial-output)
+10. [Troubleshooting](#10-troubleshooting)
 11. [Flowchart](#11-flowchart)
-12. [Contributing](#contributing)
-13. [License](#license)
-
----
+12. [Contributing](#12-contributing)
+13. [License](#13-license)
 
 ## 1. Introduction
 
