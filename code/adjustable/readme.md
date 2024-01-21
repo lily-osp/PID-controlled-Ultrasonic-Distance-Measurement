@@ -169,4 +169,4 @@ Contributions are welcomed! If you have ideas for improvements or find issues, p
 
 ## License
 
-This project is licensed under the [MIT License](../LICENSE).
+This project is licensed under the [MIT License](../../LICENSE).
