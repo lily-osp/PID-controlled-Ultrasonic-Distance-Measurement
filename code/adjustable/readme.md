@@ -17,8 +17,9 @@
    - [Proportional Gain (Kp)](#proportional-gain-kp)
    - [Integral Gain (Ki)](#integral-gain-ki)
    - [Derivative Gain (Kd)](#derivative-gain-kd)
-7. [Contributing](#contributing)
-8. [License](#license)
+7. [Flowchart](#flowchart)
+8. [Contributing](#contributing)
+9. [License](#license)
 
 ## Introduction
 
@@ -104,6 +105,63 @@ Fine-tuning PID parameters is essential for optimizing system performance. The p
 ### Derivative Gain (Kd)
 
 - The Kd potentiometer controls the system's response to sudden changes. Proper adjustment helps in minimizing overshooting and oscillations.
+
+## Flowchart
+
+```mermaid
+graph TB
+
+subgraph Main
+  Start --> setup
+  loop
+  setup --> loop
+  loop --> readSensors
+  loop --> readPotentiometers
+  loop --> calculatePID
+  loop --> Delay
+  Delay --> loop
+end
+
+subgraph Sensors
+  readSensors --> UltrasonicSensor
+  UltrasonicSensor --> CalculateDistance
+  UltrasonicSensor --> PotentiometerMotorPart
+  CalculateDistance --> DisplayData
+  PotentiometerMotorPart --> DisplayData
+  DisplayData --> loop
+end
+
+subgraph Potentiometers
+  readPotentiometers --> ReadKpKiKd
+  ReadKpKiKd --> DisplayPIDValues
+  DisplayPIDValues --> loop
+end
+
+subgraph PID
+  calculatePID --> CalculateError
+  CalculateError --> CalculateIntegral
+  CalculateIntegral --> CalculateDerivative
+  CalculateDerivative --> CalculateOutput
+  CalculateOutput --> MapOutputToPWM
+  MapOutputToPWM --> DisplayOutput
+  DisplayOutput --> loop
+end
+
+subgraph MotorControl
+  MapOutputToPWM --> SetMotorSpeed
+  SetMotorSpeed --> DisplayPWM
+  DisplayPWM --> loop
+end
+
+subgraph Display
+  DisplayData --> DisplaySetpointDistance
+  DisplaySetpointDistance --> loop
+  DisplayPIDValues --> DisplayKpKiKd
+  DisplayKpKiKd --> loop
+  DisplayOutput --> DisplayPWMValuePIDValue
+  DisplayPWMValuePIDValue --> loop
+end
+```
 
 ## Contributing
 
