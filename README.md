@@ -1,4 +1,4 @@
-# Readme for PID-controlled Ultrasonic Distance Measurement with Motor Control
+# Arduino PID-controlled Brusless motor system with Ultrasonic sensor
 
 ## Table of Contents
 

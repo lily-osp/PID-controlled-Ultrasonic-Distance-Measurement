@@ -1,4 +1,4 @@
-# PID Control System adjustable settings
+# Arduino PID Control System with adjustable Kp, Ki, and Kd settings
 
 ## Table of Contents
 
@@ -47,9 +47,9 @@ The ultrasonic sensor is a key component responsible for measuring distances. It
 ### Potentiometer and Motor
 
 - **Potentiometer (Setpoint Adjustment):**
-     - The potentiometer allows users to set the desired distance setpoint. It converts the analog input into a range suitable for the setpoint.
+  - The potentiometer allows users to set the desired distance setpoint. It converts the analog input into a range suitable for the setpoint.
 - **Motor Control:**
-    - The motor's speed is dynamically adjusted based on PID calculations to ensure the measured distance aligns with the user-defined setpoint.
+  - The motor's speed is dynamically adjusted based on PID calculations to ensure the measured distance aligns with the user-defined setpoint.
 
 ### Potentiometers for PID Tuning
 
@@ -60,15 +60,16 @@ Three potentiometers (KpPotPin, KiPotPin, KdPotPin) serve the purpose of fine-tu
 The PID algorithm is the heart of the control system, responsible for maintaining the setpoint distance. The algorithm involves the following steps:
 
 - **Error Calculation:**
-   - The error is computed as the difference between the setpoint and the actual measured distance.
+  - The error is computed as the difference between the setpoint and the actual measured distance.
 - **Integral and Derivative Terms:**
-   - The integral term accumulates the historical error, and the derivative term represents the rate of change of the error.
+  - The integral term accumulates the historical error, and the derivative term represents the rate of change of the error.
 - **Output Calculation:**
-   - The PID output is determined as a combination of the proportional, integral, and derivative terms.
+  - The PID output is determined as a combination of the proportional, integral, and derivative terms.
 - **Motor Control Signal:**
-   - The PID output is mapped to a PWM (Pulse Width Modulation) range, which controls the motor's speed.
+  - The PID output is mapped to a PWM (Pulse Width Modulation) range, which controls the motor's speed.
 
 ## Usage
+
 The system operates continuously, adjusting the motor's speed to maintain the desired setpoint. Users can monitor the system output through the Arduino Serial Monitor.
 
 ### Monitoring System Output
@@ -84,11 +85,11 @@ To observe the system's behavior, follow these steps:
 The serial output provides valuable insights into the system's operation. Key information includes:
 
 - **Setpoint and Distance:**
-   - Displays the user-defined setpoint and the measured distance in centimeters.
+  - Displays the user-defined setpoint and the measured distance in centimeters.
 - **PID Parameters:**
-   - Shows the current values of the proportional (Kp), integral (Ki), and derivative (Kd) gains.
+  - Shows the current values of the proportional (Kp), integral (Ki), and derivative (Kd) gains.
 - **PWM Value and PID Output:**
-   - Presents the PWM value sent to the motor and the resulting PID control output.
+  - Presents the PWM value sent to the motor and the resulting PID control output.
 
 ## Adjusting PID Parameters
 
