@@ -62,5 +62,3 @@ The LCD display is updated in a separate function (`updateLCD()`) with a customi
 ## License
 
 This project is licensed under the [MIT License](../../LICENSE).
-
-Feel free to experiment and adapt the code to suit your specific needs!

@@ -1,5 +1,7 @@
 # Arduino PID-controlled Brusless motor system with Ultrasonic sensor
 
+this readme are writen using the [base code](code/base/) as the main source of writing and explanation.
+
 ## Table of Contents
 
 1. [Introduction](#1-introduction)
