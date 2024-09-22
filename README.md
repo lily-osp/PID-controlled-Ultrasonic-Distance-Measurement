@@ -1,10 +1,11 @@
 # Arduino PID-controlled Brusless motor system with Ultrasonic sensor
 
-this readme are writen using the [base code](code/base/) as the main source of writing and explanation.
+this readme are writen using the [base code](code/no_display/hardcoded/hardcoded.ino) as the main source of writing and explanation, for the detaild explanation for the codes itteration/version u can read the readme on the [code](code) folder it self.
 
 ## Table of Contents
 
-1. [Introduction](#1-introduction)
+0. [Introduction](#0-introduction)
+1. [Version](#1-version)
 2. [Setup](#2-setup)
 3. [Dependencies](#3-dependencies)
 4. [Configuration](#4-configuration)
@@ -18,9 +19,23 @@ this readme are writen using the [base code](code/base/) as the main source of w
 12. [Contributing](#12-contributing)
 13. [License](#13-license)
 
-## 1. Introduction
+## 0. Introduction
 
 This repository contains code for a PID-controlled system that combines an ultrasonic sensor for distance measurement and motor control based on a setpoint. The PID algorithm helps maintain a specified distance from an obstacle by adjusting the motor speed.
+
+## 1. Version
+
+this repo contain various version on the code including one with display, auto ajdust pid val using continuous self-tuning and also Ziegler-Nichols method.
+
+| vesion | feature | display |
+|--------|---------|---------|
+|[manual 1](code/no_display/hardcoded/)| base version with no special feature | no |
+|[manual 2](code/no_display/adjustable/)| ajdustable pid val using pot | no |
+|[manual 3](code/LCD%202004/manual%20tune/softcode/)| adj version with display and pot | yes |
+|[manual 4](code/LCD%202004/manual%20tune/hardcode/)| non adj version with display | yes |
+|[auto 1](code/LCD%202004/auto%20tune/continuous%20self-tuning/)| auto tune with continuous tuning mechanism | yes |
+|[auto 2](code/LCD%202004/auto%20tune/Ziegler-Nichols%20method/)| auto tune with Ziegler-Nichols method | yes |
+
 
 ## 2. Setup
 
